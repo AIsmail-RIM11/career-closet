@@ -1,1 +1,36 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><meta name="theme-color" content="#f8f6f2"/><title>Career Closet | Braven × SFSU — Demo</title><meta name="description" content="A student-centered professional clothing borrowing prototype."/></head><body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#112844" />
+    <meta name="description" content="Career Closet — a Braven × SFSU Capstone prototype for borrowing professional clothing." />
+    <title>Career Closet | Braven × SFSU</title>
+    <link rel="stylesheet" href="%BASE_URL%browser-help.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- This is shown only if a script fails to load and React never mounts.
+         Websites cannot request permission to disable browser extensions. -->
+    <section id="browser-load-help" class="browser-load-help" hidden aria-live="assertive">
+      <div class="browser-load-help__card" role="alert">
+        <div class="browser-load-help__eyebrow">BRAVEN × SFSU · CAREER CLOSET</div>
+        <h1>Having trouble opening Career Closet?</h1>
+        <p>The website didn’t finish loading. A browser extension or content blocker may have blocked a script.</p>
+        <ol>
+          <li>In your browser’s extensions menu, find your ad blocker or privacy extension.</li>
+          <li>Choose <strong>Allow on this site</strong> or <strong>Pause on this site</strong>, if you trust this prototype.</li>
+          <li>Reload the page. You can also try a private/incognito window.</li>
+        </ol>
+        <p class="browser-load-help__note">You don't need to grant camera, location, or other device permissions to browse this site. We can't change your extension settings for you.</p>
+        <button id="browser-load-retry" type="button">Reload Career Closet</button>
+      </div>
+    </section>
+    <noscript>
+      <p>Career Closet needs JavaScript enabled to show the clothing catalog and reservation demo. Please enable JavaScript for this site, then reload.</p>
+    </noscript>
+    <!-- A tiny independent checker can still run if a React dependency is blocked. -->
+    <script src="%BASE_URL%browser-help.js" defer></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

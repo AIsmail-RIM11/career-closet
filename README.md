@@ -1,56 +1,70 @@
-# Career Closet — Braven × SFSU Capstone MVP
+# Career Closet — Braven × SFSU (Updated MVP + Bolt Merge)
 
-An interactive, responsive React + TypeScript + Tailwind CSS prototype demonstrating a **proposed** professional clothing reservation service for SFSU students. This is an independent student project, not an official Braven/SFSU service.
+A clickable **student-designed Braven Capstone prototype** built in React, TypeScript, Vite, and React Router. Not an official Braven or SFSU reservation service.
 
-## Features
-- Editorial landing page and mobile-friendly navigation
-- Clothing catalog with interview/networking occasion filters, garment type filters, and search
-- Outfit builder with adjustable sizes and multiple selected pieces
-- Professional outfit guide
-- Demo pickup-date selection and reservation confirmation
-- Real QR code encoding a demo staff lookup URL
-- Staff pickup demo to mark locally stored reservations as picked up
+## What's new in this release
 
-**Important demo limitation:** Reservations are stored in browser `localStorage`, not in a shared database. A QR code scanned on another device cannot retrieve the reservation unless you add a backend. For the presentation, demonstrate pickup in the **same browser** as checkout. Inventory, availability, pickup times, images, and item descriptions are illustrative. The proposed location has no confirmed address or operating hours.
+- **Original MVP photography restored:** uses the original MVP's eight Unsplash clothing images, plus its original hero and fashion-guide images. Bolt's Pexels photos are no longer used.
+- **Expanded catalog:** 24 different mock clothing items. For **each of five occasions**, each of **six clothing categories** has **two or three options**.
+- Each product can appear in **multiple occasions** (a single inventory record with a list of occasion tags).
+- **Staff check-in starts with manual reservation-code entry**. Confirm a reservation and enter the code on the Staff Demo page to look up its contents and mark it picked up.
+- The QR opens the same staff lookup automatically and carries *demo-only* reservation details, so it can also be opened on a separate device for presentations **without a backend**.
+- Preserves the Braven × SFSU multi-page visual style, filtering, saved items, outfit builder, size choices, checkout, and GitHub Pages support.
 
-## Requirements
-Node.js 20.19+ or 22.12+ recommended; npm; VS Code; Git; optional GitHub CLI (`gh`).
+### Sample collection
 
-## Run locally
+Each occasion has 2–3 options in each category: **Blazers, Tops, Trousers, Skirts, Shoes, Accessories.** Photos and inventory counts are illustrative; new shoes, skirts, and tote categories use additional free Unsplash photos in a matching style where the original MVP did not have category-specific images. See `PHOTO_SOURCES.md`.
+
+## Local setup (use a new folder; don't unzip over the old project)
+
 ```bash
+cd ~/Downloads
+mkdir -p career-closet-updated-test
+unzip Career-Closet-Braven-SFSU-UPDATED.zip -d career-closet-updated-test
+cd career-closet-updated-test/career-closet
 npm install
+npm run typecheck
+npm run lint
+npm run build
 npm run dev
 ```
-Open the URL printed by Vite. To open the folder in VS Code: `code .`.
 
-## Build and deploy
+The local URL should be `http://localhost:5173/career-closet/`.
+
+## Demo flow
+
+1. Home → select an occasion → Browse.
+2. Filter by occasion, type, size, or availability; pick items into the outfit builder.
+3. Choose clothing sizes → Reserve → confirm sample pickup window.
+4. Confirmation shows a unique `CC-...` code and a QR.
+5. **Manual:** Open Staff Demo from the navigation, type the code, and click **Look up**.
+6. **QR:** Scan the code to open the same staff lookup, including across devices for this sample-only workflow.
+7. Mark the reservation picked up.
+
+No authentication, payments, backend, or real inventory is connected. Manual entry retrieves reservations saved in *that browser*; a QR scan can also bring its sample data into a second browser. The link isn't a secure token, so **never embed real student data**.
+
+## Publish on the existing GitHub repository
+
+Existing GitHub repo: `https://github.com/AIsmail-RIM11/career-closet`
+
+Vite base path: `/career-closet/` | Router: `HashRouter`
+
+**Do not unzip on top of a working Git checkout.** After confirming local testing, use a fresh clone of your current GitHub repository (or copy the updated source into a clean Git working tree) and commit from there.
+
+To build and publish after the updated code is in the Git checkout:
+
 ```bash
+npm install
 npm run build
 npm run deploy
 ```
-Set repository GitHub Pages source to `gh-pages` branch / root. The Vite `base` is `/career-closet/`, so the repository must be named **career-closet**. For a different repo name, update `base` in `vite.config.ts`.
 
-## GitHub publishing
-Authenticate with GitHub CLI: `gh auth login` (install gh if needed). From the project folder:
-```bash
-git init
-git add .
-git commit -m "Build Career Closet MVP"
-git branch -M main
-gh repo create career-closet --public --source=. --remote=origin --push
-npm run deploy
-```
-If the repo already exists, skip `gh repo create` and connect its remote manually.
+Live presentation URL: `https://aismail-rim11.github.io/career-closet/`
 
-## Suggested live demo
-1. Browse interview clothes and choose sizes.
-2. Build an outfit, then review selected pieces.
-3. Select a sample pickup window and confirm.
-4. Show the generated QR code and reservation ID.
-5. Open Staff Pickup Demo **in the same browser**, enter the ID, and mark as picked up.
-6. Open the style guide and discuss why the service reduces uncertainty.
+> **GitHub note:** `npm run deploy` updates the GitHub Pages `gh-pages` branch; it does **not** commit updated source code to `main`. Commit and push updated source to `main` separately with Git before deploying.
 
-Record a backup screen capture in case the presentation venue loses internet access.
+## Browser blockers / blank-screen fallback
 
-## Stack
-Vite, React 19, TypeScript, Tailwind CSS 4, React Router (HashRouter for GitHub Pages), Lucide React, qrcode.react. `motion` and `gh-pages` are installed for future refinement and deployment.
+Some content-blocking extensions may block a JavaScript dependency (Chrome may report `net::ERR_BLOCKED_BY_CLIENT`). This release avoids the previously blocked `lucide-react` `Fingerprint` icon import and adds a small standalone script (`public/browser-help.js`) that shows helpful troubleshooting instructions **only if the React app never renders**. It provides a reload action; it cannot and does not ask the browser to disable security extensions or grant permissions.
+
+If this happens, use your extension's **Allow on this site** / **Pause on this site** option, or try an incognito/private window. You do not need to enable camera/location permissions to browse.
