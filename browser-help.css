@@ -1,0 +1,31 @@
+/* Minimal standalone fallback for a blocked app script. */
+.browser-load-help[hidden] { display: none !important; }
+.browser-load-help {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: grid;
+  place-items: center;
+  overflow-y: auto;
+  padding: 24px;
+  background: #f3f0e8;
+  color: #112844;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.browser-load-help__card {
+  box-sizing: border-box;
+  width: min(100%, 620px);
+  padding: clamp(24px, 5vw, 48px);
+  border-top: 7px solid #f05b6a;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(17, 40, 68, 0.13);
+  text-align: left;
+}
+.browser-load-help__eyebrow { font-size: 11px; font-weight: bold; letter-spacing: .14em; color: #5c2d91; }
+.browser-load-help h1 { margin: 17px 0 13px; font-size: clamp(25px, 4vw, 38px); line-height: 1.14; color: #112844; }
+.browser-load-help p, .browser-load-help li { color: #475362; font-size: 15px; line-height: 1.65; }
+.browser-load-help ol { margin: 17px 0 22px; padding-left: 23px; }
+.browser-load-help li + li { margin-top: 7px; }
+.browser-load-help__note { padding-top: 14px; border-top: 1px solid #dedfdf; font-size: 13px !important; }
+.browser-load-help button { margin-top: 13px; padding: 13px 21px; border: 0; border-radius: 2px; background: #112844; color: #fff; font: inherit; font-weight: bold; cursor: pointer; }
+.browser-load-help button:hover, .browser-load-help button:focus-visible { background: #f05b6a; }
