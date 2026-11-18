@@ -1,0 +1,12 @@
+Career Closet sample catalog photos
+
+The browse catalog now uses sample stock photos sourced from Pexels.
+These are illustrative only and do not represent actual Career Closet inventory.
+
+Main photo source pattern used in data.js:
+https://images.pexels.com/photos/<photo-id>/pexels-photo-<photo-id>.jpeg
+
+Referenced photo page IDs used in this build:
+4964992, 8387834, 8306373, 8465073, 7716936, 1181691, 33055636, 8575371,
+6739069, 34163156, 32519377, 6203797, 24380104, 32498626, 5393765, 7777179,
+27035622, 8134242, 15127353, 1214212, 8428057, 7679788, 6630873
