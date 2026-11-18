@@ -1,12 +1,30 @@
-Career Closet sample catalog photos
+CAREER CLOSET — SAMPLE PHOTO SOURCES
 
-The browse catalog now uses sample stock photos sourced from Pexels.
-These are illustrative only and do not represent actual Career Closet inventory.
+All images are illustrative stock photographs, not actual Career Closet inventory. Some show outfits or models, rather than the exact catalog item.
+Images are loaded from Pexels and require internet access.
+Pexels license: https://www.pexels.com/license/
 
-Main photo source pattern used in data.js:
-https://images.pexels.com/photos/<photo-id>/pexels-photo-<photo-id>.jpeg
-
-Referenced photo page IDs used in this build:
-4964992, 8387834, 8306373, 8465073, 7716936, 1181691, 33055636, 8575371,
-6739069, 34163156, 32519377, 6203797, 24380104, 32498626, 5393765, 7777179,
-27035622, 8134242, 15127353, 1214212, 8428057, 7679788, 6630873
+b01: Man in navy suit | https://www.pexels.com/photo/17362826/
+b02: Woman in blazer | https://www.pexels.com/photo/8387834/
+b03: Woman in gray blazer | https://www.pexels.com/photo/8306373/
+b04: Man in tan jacket | https://www.pexels.com/photo/6937934/
+t01: Man in white shirt | https://www.pexels.com/photo/5083017/
+t02: Woman in blue shirt | https://www.pexels.com/photo/3893767/
+t03: Woman in black top | https://www.pexels.com/photo/33055636/
+t04: Woman in blouse | https://www.pexels.com/photo/8575371/
+p01: Man in gray dress pants | https://www.pexels.com/photo/1580009/
+p02: Man in dark pants | https://www.pexels.com/photo/3875641/
+p03: Woman in black pants | https://www.pexels.com/photo/32519377/
+p04: Man in tan trousers | https://www.pexels.com/photo/23985407/
+s01: Woman in skirt | https://www.pexels.com/photo/6203797/
+s02: Skirts on hangers | https://www.pexels.com/photo/24380104/
+s03: Woman in skirt | https://www.pexels.com/photo/32498626/
+s04: Woman in light skirt | https://www.pexels.com/photo/5393765/
+sh01: Men's black dress shoes | https://www.pexels.com/photo/15557044/
+sh02: Men's brown loafers | https://www.pexels.com/photo/20763458/
+sh03: Woman in black pumps | https://www.pexels.com/photo/8134242/
+sh04: Loafers | https://www.pexels.com/photo/15127353/
+a01: Black tote bag | https://www.pexels.com/photo/1214212/
+a02: Man in suit with necktie | https://www.pexels.com/photo/8428057/
+a03: Belts | https://www.pexels.com/photo/7679788/
+a04: Scarf | https://www.pexels.com/photo/6630873/
